@@ -12,9 +12,9 @@ forcast of next five days.
 
 # Installation 
 
-1. Use ```bash git clone``` to install repository
-2. Start server by runnind ```bash node server.js```
-3. If not port specified, launch in your browser ```bash localhost:3000```
+1. Use ```git clone``` to install repository
+2. Start server by runnind ```node server.js```
+3. If not port specified, launch in your browser ```localhost:3000```
 
 # Technologies
 
