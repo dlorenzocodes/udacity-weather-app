@@ -21,7 +21,8 @@ const weatherIcons = {
     Haze: '/Images/haze.svg',
     Drizzle: '/Images/drizzle.svg',
     Fog: '/Images/fog.svg',
-    Mist: '/Images/haze.svg'
+    Mist: '/Images/haze.svg',
+    noIcon: '/Images/no-icon.svg'
 }
 
 
@@ -39,7 +40,7 @@ let nextDay5 = [];
 // Store API URl & Key
 const forcastURl = 'http://api.openweathermap.org/data/2.5/forecast?zip=';
 const weatherURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = 'your api key';
+const apiKey = '&appid=05b53c214ae94f4e4dbf2c0830ee07b1';
 let searchQuery;
 
 // The Date
@@ -131,7 +132,7 @@ async function updateUI() {
             </div>
 
             <div class="weather">
-                <img src="${weatherIcons[icon]}" alt="${icon} icon">
+                <img src="${weatherIcons[icon] || weatherIcons[noIcon]}" alt="${icon} icon">
                 <h1>${temperature}<span>&#176</span>F</h1>
                 <span class="feeling">I'm feeling ${data.mood}</span>
             </div>
