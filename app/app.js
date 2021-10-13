@@ -39,7 +39,7 @@ let nextDay5 = [];
 // Store API URl & Key
 const forcastURl = 'http://api.openweathermap.org/data/2.5/forecast?zip=';
 const weatherURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = '&appid=05b53c214ae94f4e4dbf2c0830ee07b1';
+const apiKey = 'your api key';
 let searchQuery;
 
 // The Date
