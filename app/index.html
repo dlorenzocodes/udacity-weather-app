@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-styles.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+
+        <section class="opening-section">
+            <section class="logo">
+                <h1 class="title-mobile">WeatherApp</h1>
+                <img src="/Images/umbrella.svg" alt="umbrella icon">
+            </section>
+
+            <section class="form">
+                <h1 class="title-desktop">WeatherApp</h1>
+                <input type="text" id="zip" placeholder="enter zip code here">
+                <textarea id="feelings"  placeholder="how are you feeling today?"></textarea>
+                <button id="generate">Submit</button>
+            </section>
+
+        </section>
+
+        <section class="display-section">
+
+            <div class="display-section-form">
+                <img id="display-sec-umbrella" src="/Images/umbrella.svg" alt="umbrella icon">
+                <h1 class="title-mobile">WeatherApp</h1>
+                <section class="form">
+                    <input type="text" id="zip" placeholder="enter zip code here">
+                    <textarea id="feelings" placeholder="how are you feeling today?"></textarea>
+                    <button id="generate">Submit</button>
+                </section>
+            </div>
+
+            <section class="weather-info-wrapper">
+            </section>
+
+            <div class="forcast">
+                <ul>
+                    <li>
+                        <span class="day">Mon</span>
+                        <img>
+                        <span class="temperature">73</span>
+                    </li>
+                    <li>
+                        <span class="day">Mon</span>
+                        <img>
+                        <span class="temperature">73</span>
+                    </li>
+                    <li>
+                        <span class="day">Mon</span>
+                        <img>
+                        <span class="temperature">73</span>
+                    </li>
+                    <li>
+                        <span class="day">Mon</span>
+                        <img>
+                        <span class="temperature">73</span>
+                    </li>
+                    <li>
+                        <span class="day">Mon</span>
+                        <img>
+                        <span class="temperature">73</span>
+                    </li>
+                </ul>
+            </div>
+
+            <section class="not-found">
+                <img src="Images/undraw_not_found_60pq.svg" alt="page not found illustration">
+            </section>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

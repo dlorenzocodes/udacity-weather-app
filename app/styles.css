@@ -1,0 +1,157 @@
+
+:root{
+   --regular-font-weight: 400;
+   --medium-font-weight: 500;
+   --bold-font-weight: 700;
+   --orange-color: #FE7A30;
+   --yellow-color: #FEB830;
+   --bg-color: #FAFAFA;
+   --light-grey: #E5E5E5;
+}
+
+*, 
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.main-container{
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* OPENING SECTION */
+
+.opening-section{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+}
+
+.logo{
+    background-color: var(--bg-color);
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.logo img{
+    width: 60%;
+    padding-top: 4rem;
+    padding-bottom: 2.7rem;
+    max-width: 350px;
+}
+
+.title-mobile{
+    font-size: 1.5rem;
+    font-weight: var(--bold-font-weight);
+}
+
+.title-desktop{
+    display: none;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    max-width: 350px;
+    margin: 0 auto;
+    /* padding-bottom: 2rem; */
+}
+
+input,
+textarea,
+button{
+    border: 1px solid var(--orange-color);
+    border-radius: 2.3rem;
+    margin-bottom: 1.3rem;
+    box-shadow: 1px 5px 24px 0px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+
+input,
+textarea{
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+}
+
+input{
+    padding: 1rem;
+    background-image: url('/Images/search-01.jpg');
+    background-repeat: no-repeat;
+    background-position: 90%;
+}
+
+
+textarea{
+    resize: none;
+    overflow: hidden;
+    padding: 0.2rem 1rem;
+    display: block;
+}
+
+::placeholder{
+    color: var(--light-grey);
+    font-weight: var(--bold-font-weight);
+    font-size: 0.8rem;
+    font-family: 'Quicksand', sans-serif;
+    padding-left: 1rem;
+}
+
+textarea::placeholder{
+    line-height: 2.8rem;
+}
+
+#generate{
+    width: 35%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0.7rem 0;
+    font-weight: var(--medium-font-weight);
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+    z-index: 1;
+}
+
+#generate:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--orange-color);
+    border-radius: 2.3rem;
+    transition: all .3s ease-in-out;
+    z-index: -1;
+}
+
+#generate:hover{
+    text-transform: uppercase;
+    color: var(--light-grey);
+}
+
+#generate:hover:after{
+    width: 100%;
+}
