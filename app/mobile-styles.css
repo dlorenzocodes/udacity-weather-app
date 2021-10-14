@@ -150,13 +150,11 @@ ul li{
 }
 
 .not-found.show{
+    display: flex;
     width: 60%;
     max-width: 400px;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-row: 1/3;
+    padding: 9rem 0;
 }
 
 .forcast.hide,

@@ -40,7 +40,7 @@ let nextDay5 = [];
 // Store API URl & Key
 const forcastURl = 'http://api.openweathermap.org/data/2.5/forecast?zip=';
 const weatherURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = 'your api key here';
+const apiKey = 'your api key';
 let searchQuery;
 
 // The Date
@@ -78,13 +78,11 @@ function checkStatus(response){
     if(response.status === 200){
         forcastSection.classList.remove('hide');
         weatherWrapper.classList.remove('hide');
-        displaySection.style.height = "100vh";
         notFound.classList.remove('show');
         return Promise.resolve(response)
     } else{
         forcastSection.classList.add('hide');
         weatherWrapper.classList.add('hide');
-        displaySection.style.height = "auto";
         notFound.classList.add('show');
         setTimeout(() => {
             Promise.reject(new Error(alert(`Zip code ${response.statusText}. Try again!`)));
