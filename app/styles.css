@@ -51,14 +51,14 @@ li{
 .logo{
     background-color: var(--bg-color);
     text-align: center;
-    padding-top: 6rem;
+    padding-top: 4rem;
 }
 
 .logo img{
-    width: 60%;
+    width: 45%;
     padding-top: 4rem;
     padding-bottom: 2.7rem;
-    max-width: 350px;
+    max-width: 250px;
 }
 
 .title-mobile{
@@ -76,7 +76,6 @@ li{
     width: 75%;
     max-width: 350px;
     margin: 0 auto;
-    /* padding-bottom: 2rem; */
 }
 
 input,
@@ -91,7 +90,7 @@ button{
 
 input,
 textarea{
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 500;
     font-family: 'Quicksand', sans-serif;
 }
@@ -107,7 +106,7 @@ input{
 textarea{
     resize: none;
     overflow: hidden;
-    padding: 0.2rem 1rem;
+    padding: 0.3rem 1rem;
     display: block;
 }
 

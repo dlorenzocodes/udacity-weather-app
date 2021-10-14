@@ -14,8 +14,9 @@
 }
 
 #display-sec-umbrella{
-    width: 15%;
+    width: 5%;
     margin: 0 auto;
+    max-width: 60px;
 }
 
 .display-section-form .form{
@@ -27,6 +28,11 @@
 
 .weather-info-wrapper{
     padding: 4rem 4rem 0;
+}
+
+.weather img{
+    width: 65%;
+    max-width: 250px;
 }
 
 .city{
@@ -56,7 +62,7 @@
 /* ------------------ */
 
 .weather{
-    padding: 4rem 0;
+    padding: 4rem 0 0;
     text-align: center;
 }
 
@@ -75,7 +81,7 @@
 /* -------------------- */
 
 .weather-info{
-    padding-bottom: 4rem;
+    padding: 4rem 0;
     text-align: center;
 }
 
@@ -111,7 +117,7 @@
 }
 
 .forcast img{
-    width: 50%;
+    width: 35%;
     margin: 0 auto;
 }
 

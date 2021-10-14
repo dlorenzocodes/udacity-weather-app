@@ -37,70 +37,6 @@
 }
 
 
-/* -------------------------------- */
-
-/* Disables landscape mode on mobile and tablets  */
-@media screen and (min-width: 320px) and (max-width: 1024px) and (orientation: landscape) {
-    html {
-        transform: rotate(-90deg);
-        transform-origin: left top;
-        width: 100vh;
-        overflow-x: hidden;
-        position: absolute;
-        top: 100%;
-        left: 0;
-    }
-
-    .logo{
-        padding: 2rem 1rem 1rem;
-    }
-
-    .form{
-        width: 59%;
-    }
-
-    input,
-    textarea{
-        margin-bottom: 1rem;
-    }
-
-    input{
-        padding: 0.8rem 1rem;
-    }
-
-    textarea{
-        padding: 0 1rem;
-    }
-
-    ::placeholder{
-        font-size: 0.7rem;
-    }
-
-    #generate{
-        width: 55%;
-    }
-}
-
-/* ------------------------------------ */
-
-@media screen and (min-width: 600px) and (max-width: 1024px) and (orientation: landscape) {
-
-    .logo{
-        margin-bottom: 4rem;
-    }
-}
-
-/* ------------------------------------- */
-
-@media screen and (min-width: 800px) and (max-width: 1024px) and (orientation: landscape) {
-
-    .logo{
-        padding: 8rem 1rem 1rem;
-    }
-}
-
-/* --------------------------------- */
-
 /* Tablet */
 @media screen and (min-width: 48em){
 
@@ -116,16 +52,11 @@
 
     input,
     textarea{
-        font-size: 1.5rem;
         margin-bottom: 1rem;
     }
 
     input{
         padding: 1rem;
-    }
-
-    textarea{
-        padding: 0 1rem;
     }
 
     ::placeholder{
@@ -139,20 +70,16 @@
 
     /* Display Section */
 
-    #display-sec-umbrella{
-        width: 5%;
-    }
-
     .city h2{
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .city h1{
-        font-size: 3.25rem;
+        font-size: 2rem;
     }
 
     .city h3{
-        font-size: 2.125rem;
+        font-size: 1.5rem;
     }
 
     .weather img{
@@ -160,24 +87,24 @@
     }
 
     .weather h1{
-        font-size: 5rem;
+        font-size: 3rem;
+        padding-top: 1rem;
     }
 
     .weather .feeling{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .temps h3{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
     .weather-info{
-        padding-top: 2rem;
-        padding-bottom: 6rem;
+        padding-top: 3rem;
     }
 
     .weather-info .wind{
-        font-size: 2rem;
+        font-size: 1.2rem;
     }
 
     .forcast{
@@ -185,7 +112,7 @@
     }
 
     .forcast li > span{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .forcast .day{
@@ -197,46 +124,11 @@
     }
 }
 
-/* --------------------------------- */
 
-@media screen and (min-width: 64em){
-    
-    /* Opening Section */
-
-    .logo{
-        padding-top: 11rem;
-        padding-bottom: 3rem;
-    }
-
-    .logo h1{
-        font-size: 2rem;
-    }
-
-    .logo img{
-        width: 30%;
-    }
-
-
-
-    /* Display Section */
-
-    .display-section-form{
-        padding: 4rem 0;
-    }
-
-    .display-section-form .form{
-        padding-top: 4rem;
-    }
-
-    .weather img{
-        width: 40%;
-    }
-
-}
 
 /* ---------------------------------- */
 
-@media screen and (min-width: 75em){
+@media screen and (min-width: 64em){
 
     /* Opening Section */
 
@@ -247,8 +139,7 @@
     }
 
     .logo{
-        flex: 1 0 auto;
-        padding: 18rem 0;
+        padding: 15rem 0;
         height: 100vh;
     }
 
@@ -288,7 +179,7 @@
     .display-section-form{
         grid-row: 1/3;
         align-self: center;
-        padding: 19rem 0;
+        padding: 15rem 0;
     }
 
     .forcast{
@@ -299,7 +190,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 200px 1fr;
-        padding-top: 6rem;
+        padding-top: 0;
     }
 
     .weather{
@@ -309,11 +200,17 @@
     .weather-info{
         grid-column: 2/3;
         grid-row: -3/-2;
+        align-self: center;
     }
 
     .display-section-form input::placeholder,
     .display-section-form textarea::placeholder{
-        font-size: 1.2rem;
+        font-size: 0.8rem;
+    }
+
+    #generate{
+        width: 55%;
+        font-size: 1rem;
     }
 
     .display-section-form .form{
@@ -322,21 +219,27 @@
 
     .city{
         text-align: left;
+        align-self: center;
     }
 
     .city h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding-top: 0.5rem;
+    }
+
+    .city h2{
+        font-size: 1rem;
     }
 
     .city h3{
         font-size: 1.5rem;
-        padding-top: 0;
+        padding-top: 4px;
     }
 
     .weather-info{
         text-align: right;
         padding-bottom: 0;
+        padding-top: 0;
     }
 
     .temps{
@@ -344,11 +247,11 @@
     }
 
     .temps h3{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .weather-info .wind{
-        font-size: 1.8rem;
+        font-size: 1.3rem;
     }
 
     .weather{
@@ -356,8 +259,12 @@
         padding-bottom: 7rem;
     }
 
+    .weather img{
+        width: 45%;
+    }
+
     .forcast{
-        padding: 0 5rem 2rem;
+        padding: 0 5rem 0rem;
     }
 
     .forcast li > span {
