@@ -15,7 +15,7 @@ const weatherIcons = {
     Clouds: '/Images/cloud.svg',
     Clear: '/Images/clear.svg',
     Rain: '/Images/rain.svg',
-    Snow: '/Images/snowing.svg',
+    Snow: '/Images/snow.svg',
     Thunderstorm: '/Images/thunderstorm.svg',
     Tornado: '/Images/tornado.svg',
     Haze: '/Images/haze.svg',
