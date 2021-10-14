@@ -45,7 +45,6 @@ li{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    align-items: center;
 }
 
 .logo{
@@ -76,6 +75,7 @@ li{
     width: 75%;
     max-width: 350px;
     margin: 0 auto;
+    align-self: center;
 }
 
 input,
