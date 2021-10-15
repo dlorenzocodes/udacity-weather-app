@@ -40,7 +40,7 @@ let nextDay5 = [];
 // Store API URl & Key
 const forcastURl = 'http://api.openweathermap.org/data/2.5/forecast?zip=';
 const weatherURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = '&appid=05b53c214ae94f4e4dbf2c0830ee07b1';
+const apiKey = '&appid=05b53c214ae94f4e4dbf2c0830ee07b1&units=imperial';
 let searchQuery;
 
 // The Date
@@ -117,9 +117,6 @@ async function updateUI() {
     try{
         const data = await response.json();
         const icon = data.icon;
-        const temperature = Math.round((`${data.temp}` - 273.15) * 9/5 + 32);
-        const maxTemp = Math.round((`${data.tempMax}` - 273.15) * 9/5 + 32);
-        const minTemp = Math.round((`${data.tempMin}` - 273.15) * 9/5 + 32);
         let html = '';
 
         html = `
@@ -131,14 +128,14 @@ async function updateUI() {
 
             <div class="weather">
                 <img src="${weatherIcons[icon] || weatherIcons[noIcon]}" alt="${icon} icon">
-                <h1>${temperature}<span>&#176</span>F</h1>
+                <h1>${Math.round(data.temp)}<span>&#176</span>F</h1>
                 <span class="feeling">I'm feeling ${data.mood}</span>
             </div>
 
             <div class="weather-info">
                 <div class="temps">
-                    <h3>H ${maxTemp}<span>&#176</span>F</h3>
-                    <h3>L ${minTemp}<span>&#176</span>F</h3>
+                    <h3>H ${Math.round(data.tempMax)}<span>&#176</span>F</h3>
+                    <h3>L ${Math.round(data.tempMin)}<span>&#176</span>F</h3>
                 </div>
                 <span class="wind">Wind ${data.wind} mph</span>
             </div>
@@ -180,7 +177,6 @@ function getNextFiveDays(list, currentDay){
             nextDay5.push(list[i].weather[0].main);
         }
     }
-    console.log(nextDay5);
 }
 
 
@@ -208,7 +204,7 @@ function updateForcastUI(data){
 
     forcastTemp.forEach((el, index) => {
         const tempToFar = nextDaysArray[index][1];
-        const temperature = Math.round((`${tempToFar}` - 273.15) * 9/5 + 32);
+        const temperature = Math.round(tempToFar);
         el.innerHTML = `${temperature}<span>&#176</span>F`;
     });
 
@@ -218,7 +214,6 @@ function updateForcastUI(data){
     nextDay3.length = 0;
     nextDay4.length = 0
     nextDay5.length = 0;
-    console.log(nextDay1, nextDay2, nextDay3, nextDay4, nextDay5);
 }
 
 // Screens functionality-------------------
@@ -248,6 +243,7 @@ function getformValues(btnIndex, array) {
     }
 }
 
+
 // Submit buttons event listeners
 btns.forEach((btn, index) => {
     btn.addEventListener('click',() => {
@@ -263,7 +259,8 @@ btns.forEach((btn, index) => {
         hideOpeningSection(index);
         handleWeatherData(textareaValue);
         handleForcastData(searchQuery);
-        
+        inputs[1].value = '';
+        textAreas[1].value = '';
     });
 });
 
