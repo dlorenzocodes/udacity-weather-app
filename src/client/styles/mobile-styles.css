@@ -1,0 +1,163 @@
+@import 'styles.css';
+
+/* DISPLAY SECTION STYLES */
+
+.display-section{
+    height: 100vh;
+    display: none;
+}
+
+.display-section-form{
+    text-align: center;
+    padding-top: 2rem;
+    background-color: var(--bg-color);
+}
+
+#display-sec-umbrella{
+    width: 5%;
+    margin: 0 auto;
+    max-width: 60px;
+}
+
+.display-section-form .form{
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* WEATHER STYLES */
+
+.weather-info-wrapper{
+    padding: 4rem 4rem 0;
+}
+
+.weather img{
+    width: 65%;
+    max-width: 250px;
+}
+
+.city{
+    text-align: center;
+}
+
+.city h1{
+    font-weight: var(--bold-font-weight);
+    font-size: 2.25rem;
+    padding-top: 1rem;
+}
+
+.city h2,
+.city h3{
+    font-weight: var(--regular-font-weight);
+}
+
+.city h2{
+    font-size: 1rem;
+}
+
+.city h3{
+    font-size: 1.125rem;
+    padding-top: 0.5rem;
+}
+
+/* ------------------ */
+
+.weather{
+    padding: 4rem 0 0;
+    text-align: center;
+}
+
+.weather h1{
+    font-weight: var(--regular-font-weight);
+    font-size: 4rem;
+}
+
+.weather .feeling{
+    font-weight: var(--mediun-font-weight);
+    font-size: 1rem;
+    padding-top: 0.5rem;
+    display: block;
+}
+
+/* -------------------- */
+
+.weather-info{
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.temps{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+}
+
+.temps h3{
+    font-weight: var(--regular-font-weight);
+    font-size: 1.5rem;
+}
+
+.temps h3:first-child{
+    margin-right: 1rem;
+}
+
+.weather-info .wind{
+    font-size: 1.2rem;
+}
+
+/* -------------------- */
+
+.forcast{
+    padding: 0 2rem 2rem;
+}
+
+.forcast ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.forcast img{
+    width: 35%;
+    margin: 0 auto;
+}
+
+ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forcast li > span{
+    font-size: 1.2rem;
+}
+
+.forcast .day{
+    padding-bottom: 1rem;
+}
+
+.forcast .temperature{
+    padding-top: 1rem;
+}
+
+.not-found{
+    display: none;
+}
+
+/* Dynamic Clases */
+
+.display-section.show{
+    display: block;
+}
+
+.not-found.show{
+    display: flex;
+    width: 60%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 9rem 0;
+}
+
+.forcast.hide,
+.weather-info-wrapper.hide{
+    display: none;
+}
